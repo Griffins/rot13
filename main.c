@@ -4,6 +4,7 @@
 int rot13(int c);
 void interactive();
 void direct_mode();
+void direct_mode2();
 char * rotate_text(char r[]);
 int main (int argc, char * argv[])
 {
@@ -12,6 +13,10 @@ int main (int argc, char * argv[])
 		if((strcmp(argv[c],"-t")==0) && (argc > c)){
 			direct_mode(argv[c+1]);				
 		}
+		if((strcmp(argv[c],"-n")==0) && (argc > c)){
+			direct_mode2(argv[c+1]);				
+		}
+
 	}	
 	interactive();		
 	return 0;
@@ -20,6 +25,13 @@ void direct_mode(char * a ){
 	char *s  = a;		
 	rotate_text(s);
 	printf("Rotated text: %s\n",s);
+	exit(0);
+}
+
+void direct_mode2(char * a ){
+	char *s  = a;		
+	rotate_text(s);
+	printf("%s\n",s);
 	exit(0);
 }
 void interactive(){
