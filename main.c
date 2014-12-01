@@ -10,10 +10,10 @@ int main (int argc, char * argv[])
 {
 	int c=0;
 	for (c=1;c<argc;c++){
-		if((strcmp(argv[c],"-t")==0) && (argc > c)){
+		if((strcmp(argv[c],"-t")==0) && (argc > c+1)){
 			direct_mode(argv[c+1]);				
 		}
-		if((strcmp(argv[c],"-n")==0) && (argc > c)){
+		if((strcmp(argv[c],"-n")==0) && (argc > c+1)){
 			direct_mode2(argv[c+1]);				
 		}
 
